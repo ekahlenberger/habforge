@@ -35,11 +35,11 @@ Reload the systemd configuration:
 
 Enable the new service to start automatically on boot:
 
-    sudo systemctl enable ambient-light-openhab.service
+    sudo systemctl enable habforge
 
 Start the service:
 
-    sudo systemctl start ambient-light-openhab.service
+    sudo systemctl start habforge
 
 Check the status of the service:
 

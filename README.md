@@ -14,8 +14,7 @@ After=network.target
 [Service]
 Type=notify
 User=your_user
-WorkingDirectory=/path/to/habforge
-ExecStart=/path/to/habforge/habforge
+ExecStart=/path/to/habforge
 Restart=on-failure
 RestartSec=5
 
@@ -23,9 +22,7 @@ RestartSec=5
 WantedBy=multi-user.target
 ```
 
-Replace your_user with your Linux user, /path/to/habforge with the path to the habforge folder, and /path/to/habforge/habforge with the path to your compiled Rust binary.
-
-### Command Line for Systemd Service Setup
+Replace your_user with your Linux user, /path/to/habforge with the path to the compiled habforge binary. You should copy the habforge binary to /usr/local/bin/ or any other appropriate folder beforehand and run the local service from there.
 
 To set up the systemd service, run the following commands:
 
@@ -47,7 +44,7 @@ Check the status of the service:
 
 You should now have a running systemd service that updates the openHAB item with the current illuminance value from the TinkerForge Ambient Light V2 Bricklet.
 
-### Configuration
+## Configuration
 
 To configure the Rust application using a configuration file, create a new file named config.toml in the /etc/habforge directory. This file will contain the necessary settings for the application to connect to the TinkerForge Ambient Light V2 Bricklet and the openHAB server.
 
@@ -70,7 +67,7 @@ You may change port and threshold if needed. Values should be fine.
 
 
 
-### Additional Note: Setting up Brickd
+## Additional Note: Setting up Brickd
 
 To use the TinkerForge Ambient Light V2 Bricklet, you may need to set up the Brick Daemon (brickd) to establish communication between the Bricklet and your computer. Brickd acts as a proxy between the USB interface of the Bricks and the API bindings.
 

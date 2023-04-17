@@ -1,6 +1,6 @@
 # HabForge
 
-This project is a simple Rust application that periodically updates an openHAB item with the current illuminance value from a TinkerForge Ambient Light V2 Bricklet. The application can run either in standalone mode or as a systemd service.
+This project is a simple Rust application that periodically updates an openHAB item with the current illuminance value from a TinkerForge Ambient Light V2 Bricklet. The application can run either in standalone mode (more for debugging purposes, but it does) or as a systemd service, which is its main intention. Documentation focuses on that part.
 
 ## Systemd Configuration
 
